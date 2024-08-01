@@ -1,0 +1,123 @@
+/* home.css */
+
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #0056b3; /* Frame effect */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Main Section Styling */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ddd; /* Frame effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 4px solid #0056b3; /* Frame effect */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* about.css or home.css */
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    gap: 15px; /* Space between gallery items */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 30px); /* Adjust the number of items per row and space */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures images fit within container */
+    background-color: #fff; /* Optional background color */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Optional shadow */
+}
+
+.gallery-item img {
+    width: 100%; /* Ensures image fills the container */
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+}
+/* about.css or home.css */
+

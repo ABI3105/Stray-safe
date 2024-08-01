@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Safe Strays 🐾</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>Welcome!</h2>
+            <p>You have successfully logged in.</p>
+        </div>
+        <h1>Safe Strays 🐾</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="about.html" class="nav-link">💭 About Us</a></li>
+                <li><a href="animals.html" class="nav-link">🐕 Animals</a></li>
+                <li><a href="donate.html" class="nav-link">💁 Donate</a></li>
+                <li><a href="contact.html" class="nav-link">📱 Contact</a></li>
+            </ul>
+        </nav>
+        
+        <form id="search-form" action="search.html" method="get">
+            <input type="text" id="search-query" name="query" placeholder="Search..." required />
+            <button type="submit">Search</button>
+        </form>
+        
+    </header>
+    
+    <main>
+        <form id="registration-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Register</button>
+            <link rel="stylesheet" href="event.js">
+        </form>
+    
+        <section>
+            <h2>Welcome to Safe Strays 🐾!</h2>
+            <p>Safe Strays 🐾 aims to rescue, rehabilitate, and rehome stray and abandoned animals.<br>We are committed to reducing the population of homeless animals through comprehensive programs.</p>
+            <p><a href="about.html" id="learn-more-link">Learn more about us</a> and how you can help.</p>
+        </section>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3>Annual Fundraiser</h3>
+                <p>Date: August 15, 2024</p>
+                <p>Join us for our annual fundraiser to support stray animals!</p>
+            </div>
+            <div class="event">
+                <h3>Pawsitive Adoption Day</h3>
+                <p>Date: September 2, 2024</p>
+                <p>Join us for our Pawsitive Adoption Day to support stray animals!</p>
+            </div>
+            <!-- Add more events -->
+        </section>
+
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <br>
+            <div class="gallery-item">
+                <img src="images/event1.jpg" alt="Event 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/event2.jpg" alt="Animal 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sd1.jpg" alt="Animal 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sd2.jpg" alt="Animal 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sd3.jpg" alt="Animal 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sd4.jpg" alt="Animal 5">
+            </div>
+            <!-- Add more gallery items -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Safe Strays 🐾</p>
+    </footer>
+
+    <script src="event.js"></script>
+</body>
+</html>

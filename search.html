@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Search Results</title>
+</head>
+<body>
+    <header>
+        <h1>Search Results</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="about.html">💭 About Us</a></li>
+                <li><a href="animals.html">🐕 Animals</a></li>
+                <li><a href="donate.html">💁 Donate</a></li>
+                <li><a href="contact.html">📱 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search-results">
+            <h2>Search Results for: <span id="search-query"></span></h2>
+            <div id="results-container">
+                <!-- Search results will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Safe Strays 🐾</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('query');
+
+            const resultsContainer = document.getElementById('results-container');
+            const searchQueryElement = document.getElementById('search-query');
+
+            searchQueryElement.textContent = query ? query : 'No query provided';
+
+            if (query) {
+                // Basic example of showing relevant pages based on query
+                const results = [];
+
+                if (query.toLowerCase().includes('home')) {
+                    results.push('<p><a href="home.html">🏠 Home</a></p>');
+                }
+                if (query.toLowerCase().includes('about')) {
+                    results.push('<p><a href="about.html">💭 About Us</a></p>');
+                }
+                if (query.toLowerCase().includes('animals')) {
+                    results.push('<p><a href="animals.html">🐕 Animals</a></p>');
+                }
+                if (query.toLowerCase().includes('contact')) {
+                    results.push('<p><a href="contact.html">📱 Contact</a></p>');
+                }
+                if (query.toLowerCase().includes('donate')) {
+                    results.push('<p><a href="donate.html">💁 Donate</a></p>');
+                }
+
+                if (results.length === 0) {
+                    resultsContainer.innerHTML = '<p>No results found.</p>';
+                } else {
+                    resultsContainer.innerHTML = results.join('');
+                }
+            } else {
+                resultsContainer.innerHTML = '<p>No query provided.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
