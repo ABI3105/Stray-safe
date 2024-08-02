@@ -1,133 +1,157 @@
-/* styles.css */
-
-/* Basic Reset */
-body, h1, h2, h3, p, label, input, select, button {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #f9f9f9;
-    line-height: 1.6;
 }
 
-/* Header Styling */
+.background-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url('images/about.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: scroll;
+}
+
+.paw-animations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.paw {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.7;
+    animation: paw-animation 15s infinite;
+}
+
+@keyframes paw-animation {
+    0% {
+        transform: translateY(-100px) translateX(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50px) translateX(50px) rotate(360deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+}
+
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin:0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    columns: #fff;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
+    counter-reset: #fff;
 }
 
-nav ul li a {
-    color: white;
+.nav-link {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Section Styling */
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    z-index: 1;
+    margin-top: 80px; /* Adjust this to fit below the header */
 }
 
-/* Adoption Form Styling */
-#adoption-form {
-    background: #fff;
+main form {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 20px;
 }
 
-#adoption-form label {
+main form label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
 }
 
-#adoption-form input, 
-#adoption-form select {
+main form input, main form select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-#adoption-form button {
-    background-color: #007bff;
-    color: white;
+main form button {
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1em;
-    width: 100%;
-    transition: background-color 0.3s;
 }
 
-#adoption-form button:hover {
+main form button:hover {
     background-color: #0056b3;
 }
 
-/* Animal Section Styling */
 section {
-    margin-top: 20px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .animal {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
 .animal img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
-.animal h3 {
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
-.animal p {
-    margin-bottom: 10px;
-}
-
-/* Footer Styling */
 footer {
-    background-color: #007bff;
-    color: white;
+    position:relative;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    color: #fff;
 }

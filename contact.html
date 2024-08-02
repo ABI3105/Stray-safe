@@ -7,42 +7,52 @@
     <title>Contact Us - Safe Strays 🐾</title>
 </head>
 <body>
-    <header>
-        <h1>Safe Strays 🐾</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">🏠 Home</a></li>
-                <li><a href="about.html">💭 About Us</a></li>
-                <li><a href="animals.html">🐕 Animals</a></li>
-                <li><a href="donate.html">💁 Donate</a></li>
-                <li><a href="contact.html">📱 Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <section>
-            <h2>Contact Us</h2>
-            <p>Email:marikalaabi@gmail.com</p>
-            <p>Phone:+91 9150122473</p>
-            <p>Address:Tirunelveli</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Safe Strays 🐾</p>
-    </footer>
+    <div class="background-container">
+        <div class="paw-animations">
+            <!-- Add your paw print images here -->
+            <!-- Repeat the paw print images or use CSS to create multiple instances -->
+        </div>
+        <header>
+            <h1>Safe Strays 🐾</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">🏠 Home</a></li>
+                    <li><a href="about.html">💭 About Us</a></li>
+                    <li><a href="animals.html">🐕 Animals</a></li>
+                    <li><a href="donate.html">💁 Donate</a></li>
+                    <li><a href="contact.html">📱 Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="form-section">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+            <section class="info-section">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:marikalaabi@gmail.com">marikalaabi@gmail.com</a></p>
+                <p>Phone: <a href="tel:+919150122473">+91 9150122473</a></p>
+                <p>Address: Tirunelveli</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Safe Strays 🐾</p>
+        </footer>
+        
+    </div>
+</div>
+    <script src="contact.js"></script>
 </body>
 </html>
-<!-- In contact.html -->

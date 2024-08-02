@@ -35,3 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const pawContainer = document.querySelector('.paw-animations');
+
+    for (let i = 0; i < 50; i++) {
+        const paw = document.createElement('div');
+        paw.className = 'paw';
+        paw.textContent = '🐾';
+        paw.style.top = `${Math.random() * 100}vh`;
+        paw.style.left = `${Math.random() * 100}vw`;
+        paw.style.fontSize = `${Math.random() * 30 + 20}px`; // Randomize font size
+        paw.style.animationDuration = `${Math.random() * 10 + 5}s`; // Randomize animation duration
+        pawContainer.appendChild(paw);
+    }
+});

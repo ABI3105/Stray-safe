@@ -7,59 +7,67 @@
     <title>Animals - Happy Paws 🐾</title>
 </head>
 <body>
-    <header>
-        <h1>Happy Paws 🐾</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="about.html">💭 About Us</a></li>
-                <li><a href="animals.html">🐕 Animals</a></li>
-                <li><a href="donate.html">💁 Donate</a></li>
-                <li><a href="contact.html">📱 Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Adoption form example -->
-        <form id="adoption-form">
-            <label for="animal">Select Animal:</label>
-            <select id="animal" required>
-                <option value="Buddy">Buddy</option>
-                <option value="Whiskers">Whiskers</option>
-                <option value="Puppy">Puppy</option>
-                <!-- Add more options -->
-            </select>
-            <label for="adopter-name">Your Name:</label>
-            <input type="text" id="adopter-name" required>
-            <label for="adopter-contact">Contact Information:</label>
-            <input type="text" id="adopter-contact" required>
-            <button type="submit">Apply</button>
-        </form>
+    <div class="background-container">
+        <div class="paw-animations"></div>
 
-        <section>
-            <h2>Animals Available for Adoption</h2>
-            <div class="animal">
-                <h3>Buddy</h3>
-                <img src="images/buddy.jpg" alt="Buddy">
-                <p>Buddy is a friendly dog looking for a loving home.</p>
-            </div>
-            <div class="animal">
-                <h3>Whiskers</h3>
-                <img src="images/whiskers.jpg" alt="Whiskers">
-                <p>Whiskers is a playful cat who loves to cuddle.</p>
-            </div>
-            <div class="animal">
-                <h3>Puppy</h3>
-                <img src="images/puppy.jpg" alt="Puppy">
-                <p>Puppy is a playful dog who loves to be with humans.</p>
-            </div>
-            <!-- Add more animals as needed -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Happy Paws</p>
-    </footer>
+        <header>
+            <h1>Happy Paws 🐾</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="about.html">💭 About Us</a></li>
+                    <li><a href="animals.html">🐕 Animals</a></li>
+                    <li><a href="donate.html">💁 Donate</a></li>
+                    <li><a href="contact.html">📱 Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <br>
+        <br>
 
-    <script src="adoption.js"></script>
+        <main>
+            <form id="adoption-form">
+                <label for="animal">Select Animal:</label>
+                <select id="animal" required>
+                    <option value="Buddy">Buddy</option>
+                    <option value="Whiskers">Whiskers</option>
+                    <option value="Puppy">Puppy</option>
+                    <!-- Add more options -->
+                </select>
+                <label for="adopter-name">Your Name:</label>
+                <input type="text" id="adopter-name" required>
+                <label for="adopter-contact">Contact Information:</label>
+                <input type="text" id="adopter-contact" required>
+                <button type="submit">Apply</button>
+            </form>
+
+            <section>
+                <h2>Animals Available for Adoption</h2>
+                <div class="animal">
+                    <h3>Buddy</h3>
+                    <img src="images/buddy.jpg" alt="Buddy">
+                    <p>Buddy is a friendly dog looking for a loving home.</p>
+                </div>
+                <div class="animal">
+                    <h3>Whiskers</h3>
+                    <img src="images/whiskers.jpg" alt="Whiskers">
+                    <p>Whiskers is a playful cat who loves to cuddle.</p>
+                </div>
+                <div class="animal">
+                    <h3>Puppy</h3>
+                    <img src="images/puppy.jpg" alt="Puppy">
+                    <p>Puppy is a playful dog who loves to be with humans.</p>
+                </div>
+                <!-- Add more animals as needed -->
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Happy Paws</p>
+        </footer>
+
+        <script src="adoption.js"></script>
+    </div>
 </body>
 </html>

@@ -1,88 +1,132 @@
-/* Basic Reset */
-body, h2, p, label, input, button {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #007bff; /* Blue background */
-    line-height: 1.6;
+.background-image {
+    position: relative;
+    height: 100%;
+    background: url('images/reg.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center; /* Vertically centers items */
+    padding-right: 20px; /* Add some padding to the right */
 }
 
-/* Container Styling */
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
 .container {
-    background: #fff; /* White background */
+    position: relative;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
+    width: 100%;
+    z-index: 1;
     text-align: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Optional: blur effect for background */
 }
 
-.container h2 {
-    color: #007bff; /* Blue color */
+h2 {
     margin-bottom: 20px;
+    position: relative;
+    color: white; /* Ensure text is visible on transparent background */
+}
+
+h2::after {
+    content: '🐾';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 24px;
+    animation: paw-animation 5s infinite;
+    opacity: 0;
+}
+
+@keyframes paw-animation {
+    0% {
+        transform: translateY(-100px) translateX(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50px) translateX(50px) rotate(360deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
 }
 
 .form-group {
     margin-bottom: 15px;
-    text-align: left;
+    position: relative;
 }
 
-label {
+.form-group label {
     display: block;
     margin-bottom: 5px;
+    text-align: left;
     font-weight: bold;
-    color: #007bff; /* Blue color */
+    color: white; /* Ensure label text is visible on transparent background */
 }
 
-input {
+.form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #007bff; /* Blue border */
-    border-radius: 4px;
-    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent input fields */
+    color: black; /* Ensure input text is visible */
 }
 
 button {
-    background-color: #007bff; /* Blue background */
+    width: 100%;
+    padding: 10px;
+    background: #ff6347; /* Tomato color for the register button */
     color: white;
     border: none;
-    border-radius: 4px;
-    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-    width: 100%;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background: #ff4500; /* Darker tomato color on hover */
 }
 
 #message {
-    margin-top: 15px;
+    margin-top: 10px;
     color: red;
 }
 
 p {
-    margin-top: 20px;
-    color: rgb(24, 60, 169); /* White text */
+    margin-top: 15px;
+    font-size: 14px;
+    color: white; /* Ensure paragraph text is visible */
 }
 
-a {
-    color: rgb(24, 60, 169); /* White text */
+p a {
+    color: #1e90ff; /* Dodger blue color for the "Login here" link */
     text-decoration: none;
+    font-weight: bold;
 }
 
-a:hover {
+p a:hover {
     text-decoration: underline;
 }

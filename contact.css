@@ -1,27 +1,30 @@
-/* Basic Reset */
-body, h1, h2, p, a, ul, li, input, textarea, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-
-/* Header Styling */
+.background-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url('images/about.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: scroll;
+}
+/* Header Styles */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 nav ul {
@@ -35,76 +38,158 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Section Styling */
+/* Main Section Styles */
 main {
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
-main h2 {
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-main form {
+.form-section {
     background: #fff;
     padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
 }
 
-main form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.form-section h2 {
+    margin-top: 0;
 }
 
-main form input, 
-main form textarea {
-    width: 100%;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-main form button {
-    background-color: #007bff;
-    color: white;
+form button {
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    background-color: #333;
+    color: #fff;
     cursor: pointer;
-    font-size: 1em;
-    width: 100%;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-main form button:hover {
-    background-color: #0056b3;
+form button:hover {
+    background-color: #555;
 }
 
-main section {
-    margin-top: 20px;
+.info-section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
 }
 
-main section p {
-    margin-bottom: 10px;
+.info-section h3 {
+    margin-top: 0;
 }
 
-/* Footer Styling */
+.info-section p {
+    margin: 10px 0;
+}
+
+.info-section a {
+    color: #333;
+    text-decoration: none;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #007bff;
-    color:
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Paw Animations */
+.paw-background {
+    position: relative;
+}
+
+.paw-animations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.paw-animations .paw {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    animation: movePaws 10s infinite;
+}
+
+.paw-animations .paw:nth-child(odd) {
+    animation-duration: 12s;
+}
+
+.paw-animations .paw:nth-child(even) {
+    animation-duration: 8s;
+}
+
+@keyframes movePaws {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    25% {
+        transform: translate(20%, 20%);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(0, 40%);
+        opacity: 0.9;
+    }
+    75% {
+        transform: translate(-20%, 20%);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

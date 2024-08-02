@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
+    const pawContainer = document.querySelector('.paw-animations');
+    
+    for (let i = 0; i < 50; i++) {
+        const paw = document.createElement('div');
+        paw.className = 'paw';
+        paw.textContent = '🐾';
+        paw.style.top = `${
+document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('search-form');
     searchForm.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent the default form submission
